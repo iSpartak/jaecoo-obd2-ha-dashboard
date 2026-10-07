@@ -1,0 +1,100 @@
+/**
+ * Stylesheet for FuelSection component.
+ * Layouts the fuel status bar, fuel consumption widgets, and thermal engine telemetry.
+ */
+
+.fuel-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+/* Fuel tank visual indicator wrapper */
+.fuel-gauge-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: var(--bg-dark-secondary, #181b2c);
+  border: 1px solid var(--border-color, #232742);
+  border-radius: 14px;
+  padding: 16px 20px;
+}
+
+.fuel-gauge-label-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-muted, #707593);
+  text-transform: uppercase;
+}
+
+/* Master horizontal track for the fuel bar */
+.fuel-bar-track {
+  width: 100%;
+  height: 12px;
+  background-color: #1f233a;
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Active progress level indicator within the track */
+.fuel-bar-fill {
+  height: 100%;
+  /* Dynamic width injected via JS custom property */
+  width: var(--fuel-level-width, 0%);
+  background: linear-gradient(90deg, var(--accent-color, #a855f7) 0%, #06b6d4 100%);
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(6, 182, 212, 0.4);
+  transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1); /* Ultra smooth fill shift */
+}
+
+/* Lower row: Grid of secondary numeric metrics */
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.metric-widget {
+  background-color: var(--bg-dark-secondary, #181b2c);
+  border: 1px solid var(--border-color, #232742);
+  border-radius: 12px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.metric-title {
+  font-size: 11px;
+  color: var(--text-muted, #707593);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.metric-value-wrapper {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+
+.metric-number {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-primary, #ffffff);
+  font-variant-numeric: tabular-nums;
+}
+
+.metric-unit {
+  font-size: 12px;
+  color: var(--text-muted, #707593);
+}
+
+/* Safe alert override if engine temperature creeps too high */
+.temp-alert {
+  color: #ef4444 !important;
+}

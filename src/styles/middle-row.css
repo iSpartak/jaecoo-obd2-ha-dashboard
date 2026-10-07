@@ -1,0 +1,63 @@
+/**
+ * Stylesheet for MiddleRowSection component.
+ * Layout grid for live maps, trip registers, and device status text readouts.
+ */
+
+.middle-grid {
+  display: grid;
+  grid-template-columns: 2fr 1.5fr 1.5fr;
+  gap: 12px;
+  width: 100%;
+}
+
+.mid-block {
+  background-color: var(--bg-dark-secondary, #181b2c);
+  border: 1px solid var(--border-color, #232742);
+  border-radius: 8px;
+  padding: 16px;
+  min-height: 160px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.block-header {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-muted, #707593);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 12px;
+}
+
+.map-viewport {
+  width: 100%;
+  height: 100%;
+  background-color: #111422;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-muted);
+  font-size: 13px;
+  border: 1px dashed var(--border-color);
+}
+
+.data-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 13px;
+}
+
+.data-row {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px dotted #1f233a;
+  padding-bottom: 4px;
+}
+
+.data-value {
+  font-weight: 600;
+  color: var(--text-primary);
+}

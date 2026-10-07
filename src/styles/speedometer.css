@@ -1,0 +1,88 @@
+/**
+ * Stylesheet for the SpeedometerSection component.
+ * Manages the layout for tachometer and speedometer SVG gauges.
+ */
+
+.speedo-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.gauge-box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-dark-secondary, #181b2c);
+  border: 1px solid var(--border-color, #232742);
+  border-radius: 14px;
+  padding: 20px;
+  min-height: 220px;
+}
+
+/* SVG basic canvas setup */
+.gauge-svg {
+  width: 180px;
+  height: 180px;
+  transform: rotate(-90px); /* Centers the progress arc standardly */
+}
+
+/* The background track of the gauge */
+.gauge-track {
+  fill: none;
+  stroke: #1f233a;
+  stroke-width: 8;
+}
+
+/* The active, animated progress bar */
+.gauge-progress {
+  fill: none;
+  stroke-width: 8;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.4s ease-out; /* Smooths out OBD2 latency */
+}
+
+/* Specific styling for the center digital display */
+.gauge-center-text {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.digital-value {
+  font-size: 42px;
+  font-weight: 800;
+  color: var(--text-primary, #ffffff);
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+.digital-unit {
+  font-size: 12px;
+  color: var(--text-muted, #707593);
+  text-transform: uppercase;
+  margin-top: 4px;
+  letter-spacing: 0.5px;
+}
+
+/* Gear indicator style box */
+.gear-indicator {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--accent-color, #a855f7);
+  background: #111422;
+  padding: 4px 12px;
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+  margin-top: 8px;
+}

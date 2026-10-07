@@ -1,0 +1,61 @@
+/**
+ * Updated Global Stylesheet for Jaecoo OBD2 Dashboard Card.
+ * Maps perfectly to the 4-row layout scheme.
+ */
+
+.jaecoo-dashboard-wrapper {
+  --bg-dark-primary: #111422;
+  --bg-dark-secondary: #181b2c;
+  --border-color: #232742;
+  --text-primary: #ffffff;
+  --text-muted: #707593;
+  --accent-color: #a855f7;
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  padding: 20px;
+  background-color: var(--bg-dark-primary);
+  color: var(--text-primary);
+  border-radius: 16px;
+  font-family: monospace; /* Matching the schematic aesthetic */
+  box-sizing: border-box;
+}
+
+/* Row 2: Top Telemetry & Car Badge Grid */
+.telemetry-row-grid {
+  display: grid;
+  grid-template-columns: 1.2fr repeat(4, 1fr) 2fr; /* Fits JAECOO 7, 4 micro-gauges, and Car Image block */
+  gap: 12px;
+  width: 100%;
+}
+
+/* Row 3: Live Map, Current Trip, and Vehicle Status */
+.middle-row-grid {
+  display: grid;
+  grid-template-columns: 2fr 1.5fr 1.5fr;
+  gap: 12px;
+  width: 100%;
+}
+
+/* Row 4: Analytics Graphs (Fuel Economy & Mileage History) */
+.bottom-charts-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  width: 100%;
+}
+
+/* Common block style for all layout cells */
+.dashboard-block {
+  background-color: var(--bg-dark-secondary);
+  border: 1px dashed var(--border-color); /* Temporary dashed look matching layout specs */
+  border-radius: 8px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100px;
+}

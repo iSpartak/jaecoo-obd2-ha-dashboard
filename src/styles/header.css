@@ -1,0 +1,67 @@
+/**
+ * Stylesheet for HeaderSection component.
+ * Handles top bar layout styling, neon accents, and status badges.
+ */
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border-color, #232742);
+}
+
+.car-identity {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.car-title {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--text-primary, #ffffff);
+}
+
+.system-status-pill {
+  font-size: 11px;
+  color: var(--accent-color, #a855f7);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.telemetry-group {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.telemetry-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+}
+
+.telemetry-label {
+  font-size: 11px;
+  color: var(--text-muted, #707593);
+  text-transform: uppercase;
+}
+
+.telemetry-value {
+  font-size: 16px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  color: var(--text-primary, #ffffff);
+}
+
+.voltage-alert {
+  color: #ef4444 !important;
+  animation: pulse-neon 1.5s infinite;
+}

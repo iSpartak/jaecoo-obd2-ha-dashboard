@@ -1,0 +1,86 @@
+/**
+ * Stylesheet for TelemetrySection component.
+ * Maps out row 2 with 4 metrics and the right car image weather block.
+ */
+
+.telemetry-grid {
+  display: grid;
+  grid-template-columns: 1.2fr repeat(4, 1fr) 2fr;
+  gap: 12px;
+  width: 100%;
+}
+
+.tel-block {
+  background-color: var(--bg-dark-secondary, #181b2c);
+  border: 1px solid var(--border-color, #232742);
+  border-radius: 8px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 110px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.brand-title {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--text-primary);
+  text-transform: uppercase;
+}
+
+.tel-label {
+  font-size: 11px;
+  color: var(--text-muted, #707593);
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.tel-value {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-primary);
+  font-variant-numeric: tabular-nums;
+}
+
+.tel-unit {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+/* Right block with car picture and weather */
+.car-image-block {
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 12px 16px;
+}
+
+.car-placeholder {
+  font-size: 13px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.weather-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-top: auto;
+  text-align: left;
+}
+
+.weather-temp {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.weather-cond {
+  font-size: 12px;
+  color: var(--text-muted);
+}

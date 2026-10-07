@@ -1,0 +1,52 @@
+/**
+ * Stylesheet for AnalyticsSection component.
+ * Configures charts bounding grids and visualization surfaces.
+ */
+
+.analytics-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  width: 100%;
+}
+
+.chart-block {
+  background-color: var(--bg-dark-secondary, #181b2c);
+  border: 1px solid var(--border-color, #232742);
+  border-radius: 8px;
+  padding: 16px;
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.chart-title {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-muted, #707593);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 16px;
+}
+
+.chart-canvas-mock {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  padding-top: 10px;
+  border-left: 2px solid #1f233a;
+  border-bottom: 2px solid #1f233a;
+  box-sizing: border-box;
+}
+
+/* Simulated graphical bars matching schema view style */
+.mock-bar {
+  flex: 1;
+  background: linear-gradient(0deg, var(--accent-color, #a855f7) 0%, #06b6d4 100%);
+  border-radius: 4px 4px 0 0;
+  opacity: 0.85;
+  transition: height 0.5s ease-out;
+}
